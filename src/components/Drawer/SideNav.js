@@ -1,7 +1,6 @@
 import { Box, Drawer, Avatar, Divider } from "@mui/material";
 import { Link } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
-const SideDrawer = ({
+const SideNav = ({
   homeActive,
   aboutActive,
   resumeActive,
@@ -21,23 +20,18 @@ const SideDrawer = ({
   return (
     <>
       <Drawer
-        variant="temporary"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
+        variant="permanent"
         sx={{
-          display: { xs: "block", sm: "none" },
-          // display: { xs: "block", sm: "none" },
+          display: { xs: "none", sm: "block" },
+          // display: { xs: "none", sm: "none", md: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
             background: "rgb(25,29,43)",
           },
         }}
+        open
       >
-        <CloseIcon />
         <Box
           sx={{
             height: "100vh",
@@ -482,4 +476,4 @@ const SideDrawer = ({
   );
 };
 
-export default SideDrawer;
+export default SideNav;
