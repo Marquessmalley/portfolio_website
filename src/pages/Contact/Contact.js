@@ -13,9 +13,16 @@ const Contact = () => {
     message: "",
   });
 
+  const handleFormData = (e) => {
+    setFormData((prevState) => {
+      return { ...prevState, [e.target.name]: e.target.value };
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  console.log(formData);
 
   return (
     <Grid container spacing={4}>
@@ -27,8 +34,10 @@ const Contact = () => {
           <Box sx={{ color: "#fff" }}>
             <TextField
               label="Name"
+              name="name"
               variant="outlined"
               required
+              onChange={handleFormData}
               sx={{
                 width: "100%",
                 mb: 2,
@@ -49,9 +58,11 @@ const Contact = () => {
           <Box>
             <TextField
               label="Email"
+              name="email"
               variant="outlined"
               type="email"
               required
+              onChange={handleFormData}
               sx={{
                 width: "100%",
                 mb: 2,
@@ -72,8 +83,10 @@ const Contact = () => {
           <Box>
             <TextField
               label="Subject"
+              name="subject"
               variant="outlined"
               required
+              onChange={handleFormData}
               sx={{
                 width: "100%",
                 mb: 2,
@@ -94,10 +107,12 @@ const Contact = () => {
           <Box>
             <TextField
               label="Message"
+              name="message"
               variant="outlined"
               multiline
               rows={4}
               required
+              onChange={handleFormData}
               sx={{
                 width: "100%",
                 mb: 2,
