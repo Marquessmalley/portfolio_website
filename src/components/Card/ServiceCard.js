@@ -1,7 +1,10 @@
 import { Box, Card, CardContent, Divider } from "@mui/material";
 const ServiceCard = ({ id, icon, title, desc }) => {
   return (
-    <Card key={id} sx={{ maxWidth: 350, background: "rgb(25,29,43)" }}>
+    <Card
+      key={id}
+      sx={{ maxWidth: 350, background: "rgb(25,29,43)", margin: "1rem" }}
+    >
       <CardContent>
         <Box>
           <p>ICON</p>

@@ -1,5 +1,9 @@
 import React from "react";
 import { Grid, Box, LinearProgress } from "@mui/material";
+import Header from "../../components/layouts/Header";
+import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
+import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
+
 const Resume = () => {
   const appSkills = [
     { id: 0, skill: "HTML5", grade: 95 },
@@ -41,27 +45,45 @@ const Resume = () => {
       grade: 75,
     },
   ];
+
+  const workHistory = [
+    {
+      id: 0,
+      year: "Jan 2023 - Present",
+      position: "Freelance",
+      company: "Self",
+      description:
+        "Design and develop websites and web applications for clients, using various programming languages and frameworks.",
+    },
+    {
+      id: 1,
+      year: "Jan 2022-2023",
+      position: "React UI Developer",
+      company: "Creative Mines",
+      description:
+        "As a developer, help team build modern, custom and secure web/mobile applications that engage users and reach businesses goals.",
+    },
+  ];
+
+  const education = [
+    {
+      id: 0,
+      school: "Ottawa Hills Highschool",
+      year: "2012-2016",
+      accoladeOne: "National Honor Society (Sept 2014 - June 2016)",
+      accoladeTwo: "Academic Hall of Fame (Sept 2015 - June 2016)",
+    },
+    {
+      id: 1,
+      school: "Western Michigan University",
+      year: "2016-2020",
+      major: "Computer Information Systems",
+      degree: "Bachelors of Business Administration ",
+    },
+  ];
   return (
     <Grid container>
-      <Grid xs={12} sm={12} md={12} lg={12}>
-        <Box sx={{}}>
-          <h2
-            style={{
-              color: "white",
-              fontWeight: 600,
-              fontSize: "2.5rem",
-              textTransform: "uppercase",
-            }}
-          >
-            MY SKILLS
-          </h2>
-          <LinearProgress
-            variant="determinate"
-            value={50}
-            sx={{ width: "10%" }}
-          />
-        </Box>
-      </Grid>
+      <Header title={"MY SKILLS"} progressValue={50} />
 
       {/* LEFT COLUMN */}
       <Grid item xs={12} sm={6} md={6} lg={6} sx={{ marginTop: "35px" }}>
@@ -146,6 +168,94 @@ const Resume = () => {
           </Box>
         ))}
       </Grid>
+
+      {/* RESUME SECTION */}
+
+      <Header title={"RESUME"} progressValue={50} />
+
+      <Grid>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <BusinessCenterOutlinedIcon
+            sx={{ color: "#a4acc4", fontSize: "2rem", mr: 2 }}
+          />
+          <p style={{ color: "#fff", fontSize: "27px", fontWeight: 600 }}>
+            Working Experience
+          </p>
+        </Box>
+      </Grid>
+
+      {workHistory.map((work) => (
+        <Grid
+          lg={12}
+          item
+          sx={{
+            marginTop: "35px",
+            display: "flex",
+          }}
+        >
+          <Grid xs={3} sm={3} md={3} lg={3} item>
+            <Box>
+              <p style={{ color: "#a4acc4", fontSize: "18px" }}>{work.year}</p>
+            </Box>
+          </Grid>
+
+          <Grid xs={8} sm={9} md={8}>
+            <h2 style={{ color: "#037fff", fontWeight: 700 }}>
+              {work.position}
+            </h2>
+            <p style={{ color: "#fff", fontSize: "18px" }}>{work.company}</p>
+            <p
+              style={{ color: "#a4acc4", fontSize: "18px", lineHeight: "30px" }}
+            >
+              {work.description}
+            </p>
+          </Grid>
+        </Grid>
+      ))}
+
+      <Grid>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <LibraryBooksOutlinedIcon
+            sx={{ color: "#a4acc4", fontSize: "2rem", mr: 2 }}
+          />
+          <p style={{ color: "#fff", fontSize: "27px", fontWeight: 600 }}>
+            Education Qualifications
+          </p>
+        </Box>
+      </Grid>
+
+      {education.map((education) => (
+        <Grid
+          lg={12}
+          item
+          sx={{
+            marginTop: "35px",
+            display: "flex",
+          }}
+        >
+          <Grid xs={3} sm={3} md={3} lg={3} item>
+            <Box>
+              <p style={{ color: "#a4acc4", fontSize: "18px" }}>
+                {education.year}
+              </p>
+            </Box>
+          </Grid>
+
+          <Grid xs={8} sm={9} md={8}>
+            <h2 style={{ color: "#037fff", fontWeight: 700 }}>
+              {education.school}
+            </h2>
+            <p style={{ color: "#fff", fontSize: "18px" }}>
+              {education.accoladeOne || education.major}
+            </p>
+            <p
+              style={{ color: "#a4acc4", fontSize: "18px", lineHeight: "30px" }}
+            >
+              {education.accoladeTwo || education.degree}
+            </p>
+          </Grid>
+        </Grid>
+      ))}
     </Grid>
   );
 };
