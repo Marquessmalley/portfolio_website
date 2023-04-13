@@ -1,11 +1,15 @@
 import { useState } from "react";
 import Header from "../../components/layouts/Header";
-import { Grid, Box, TextField, Typography, Button } from "@mui/material";
+import { Grid, Box, TextField, Button, Alert, AlertTitle } from "@mui/material";
+import emailjs from "emailjs-com";
+
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Contact = () => {
+  const [formError, setFormError] = useState(false);
+  const [formConfirmed, setFormConfirmed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,22 +25,57 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const { name, email, subject, message } = formData;
+
+    if (!name || !email || !subject || !message) {
+      setFormError(true);
+      return;
+    }
+
+    // PUT KEYS IN .ENV
+    emailjs
+      .sendForm(
+        "service_z5zm70b",
+        "template_khh961z",
+        e.target,
+        "BiycPLJGiY8OAfG2H"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    setFormError(false);
+    setFormConfirmed(true);
   };
-  console.log(formData);
 
   return (
     <Grid container spacing={4}>
       <Header title={"CONTACT ME"} progressValue={50} />
 
       {/* LEFT COLUMN */}
-      <Grid xs={12} sm={6} md={6} lg={6} item mt={10}>
+      <Grid xs={12} sm={6} md={6} lg={6} item mt={2}>
+        <h2 style={{ color: "white", fontWeight: 400, fontSize: "25px" }}>
+          Get In Touch
+        </h2>
         <form onSubmit={handleSubmit}>
           <Box sx={{ color: "#fff" }}>
             <TextField
               label="Name"
               name="name"
               variant="outlined"
-              required
+              error={formError}
               onChange={handleFormData}
               sx={{
                 width: "100%",
@@ -60,8 +99,8 @@ const Contact = () => {
               label="Email"
               name="email"
               variant="outlined"
+              error={formError}
               type="email"
-              required
               onChange={handleFormData}
               sx={{
                 width: "100%",
@@ -85,7 +124,7 @@ const Contact = () => {
               label="Subject"
               name="subject"
               variant="outlined"
-              required
+              error={formError}
               onChange={handleFormData}
               sx={{
                 width: "100%",
@@ -109,9 +148,9 @@ const Contact = () => {
               label="Message"
               name="message"
               variant="outlined"
+              error={formError}
               multiline
               rows={4}
-              required
               onChange={handleFormData}
               sx={{
                 width: "100%",
@@ -130,7 +169,24 @@ const Contact = () => {
               }}
             />
           </Box>
-          <Button type="submit" variant="contained" color="primary">
+          {formError && (
+            <Alert severity="error">
+              <AlertTitle>Error</AlertTitle>
+              Please fill the entire form out.
+            </Alert>
+          )}
+          {formConfirmed && (
+            <Alert severity="success">
+              <AlertTitle>Form Sent</AlertTitle>
+              Will be in contact shortly!
+            </Alert>
+          )}
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2 }}
+          >
             Send Mail
           </Button>
         </form>
