@@ -1,4 +1,4 @@
-import { Box, Drawer, Avatar, Divider } from "@mui/material";
+import { Box, Drawer, Divider } from "@mui/material";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 const SideDrawer = ({

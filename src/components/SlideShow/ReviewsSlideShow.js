@@ -29,6 +29,7 @@ const ReviewsSlideShow = () => {
     <Slider>
       {slides.map((slide, id, index) => (
         <Grid
+          container
           key={id}
           lg={12}
           sx={{
@@ -39,6 +40,9 @@ const ReviewsSlideShow = () => {
           }}
         >
           <Grid
+            item
+            xs={8}
+            sm={8}
             md={8}
             lg={5}
             sx={{
@@ -50,7 +54,7 @@ const ReviewsSlideShow = () => {
               key={index}
               style={{
                 background: "rgb(25,29,43)",
-                padding: "2rem",
+                padding: "1.5rem",
                 borderRadius: ".5rem",
                 borderLeft: "8px solid grey",
               }}

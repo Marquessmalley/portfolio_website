@@ -10,7 +10,7 @@ import {
 
 const PortfolioCard = ({ title, description, imageUrl }) => {
   return (
-    <Grid lg={3} item>
+    <Grid xs={7} sm={6} md={4} lg={3} item>
       <Card>
         <CardHeader title={title} />
         <CardMedia component="img" image={imageUrl} />

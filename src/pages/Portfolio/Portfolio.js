@@ -56,6 +56,7 @@ const Portfolio = () => {
       <Grid
         container
         spacing={3}
+        mt={3}
         sx={{ display: "flex", justifyContent: "center" }}
       >
         {visibleCards.map((card) => (
