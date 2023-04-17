@@ -1,7 +1,7 @@
 import React from "react";
 
 const Portfolio = () => {
-  return <div style={{ color: "white" }}>Portfolio</div>;
+  return <h2 style={{ color: "white" }}>Portfolio Coming Soon</h2>;
 };
 
 export default Portfolio;

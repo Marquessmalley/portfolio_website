@@ -61,11 +61,11 @@ const Contact = () => {
   };
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={3}>
       <Header title={"CONTACT ME"} progressValue={50} />
 
       {/* LEFT COLUMN */}
-      <Grid xs={12} sm={6} md={6} lg={6} item mt={2}>
+      <Grid item xs={12} sm={10} md={6} lg={6} mt={2}>
         <h2 style={{ color: "white", fontWeight: 400, fontSize: "25px" }}>
           Get In Touch
         </h2>
@@ -193,7 +193,7 @@ const Contact = () => {
       </Grid>
 
       {/* RIGHT COLUMN */}
-      <Grid xs={12} sm={6} md={6} lg={6} item mt={10}>
+      <Grid item xs={12} sm={10} md={6} lg={6} mt={10}>
         <Grid
           item
           sx={{
@@ -209,7 +209,7 @@ const Contact = () => {
           >
             <LocalPhoneIcon sx={{ fontSize: "2rem", color: "grey" }} />
           </Box>
-          <Box m={5}>
+          <Box m={2}>
             <p style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
               Phone
             </p>
@@ -233,7 +233,7 @@ const Contact = () => {
           >
             <EmailIcon sx={{ fontSize: "2rem", color: "grey" }} />
           </Box>
-          <Box m={5}>
+          <Box m={2}>
             <p style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
               Email
             </p>
@@ -256,7 +256,7 @@ const Contact = () => {
           >
             <LocationOnIcon sx={{ fontSize: "2rem", color: "grey" }} />
           </Box>
-          <Box m={5}>
+          <Box m={2}>
             <p style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
               Address
             </p>

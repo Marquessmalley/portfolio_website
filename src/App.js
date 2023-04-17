@@ -37,7 +37,6 @@ function App() {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  console.log(mobileOpen);
 
   return (
     <Box sx={{ display: "flex" }}>

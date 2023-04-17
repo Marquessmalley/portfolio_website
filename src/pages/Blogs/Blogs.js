@@ -1,7 +1,7 @@
 import React from "react";
 
 const Blogs = () => {
-  return <div style={{ color: "white" }}>Blogs</div>;
+  return <h2 style={{ color: "white" }}>Blogs coming soon</h2>;
 };
 
 export default Blogs;

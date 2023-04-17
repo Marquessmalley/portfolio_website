@@ -86,7 +86,7 @@ const Resume = () => {
       <Header title={"MY SKILLS"} progressValue={50} />
 
       {/* LEFT COLUMN */}
-      <Grid item xs={12} sm={6} md={6} lg={6} sx={{ marginTop: "35px" }}>
+      <Grid item xs={12} sm={12} md={6} lg={6} sx={{ marginTop: "35px" }}>
         <h3 style={{ color: "#fff", marginBottom: "50px", fontSize: "1.25" }}>
           Application Developement:
         </h3>
@@ -128,7 +128,7 @@ const Resume = () => {
       </Grid>
 
       {/* RIGHT COLUMN */}
-      <Grid item xs={12} sm={6} md={6} lg={6} sx={{ marginTop: "35px" }}>
+      <Grid item xs={12} sm={12} md={6} lg={6} sx={{ marginTop: "35px" }}>
         <h3 style={{ color: "#fff", marginBottom: "50px", fontSize: "1.25" }}>
           Frameworks & Tools:
         </h3>
