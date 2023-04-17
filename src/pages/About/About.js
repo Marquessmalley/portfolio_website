@@ -5,27 +5,27 @@ import ServiceCard from "../../components/Card/ServiceCard";
 import ReviewsSlideShow from "../../components/SlideShow/ReviewsSlideShow";
 import BrushIcon from "@mui/icons-material/Brush";
 import CodeIcon from "@mui/icons-material/Code";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+// import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 const About = () => {
   const serviceInfo = [
     {
       id: 0,
       title: "Web Design",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+      desc: "The process of creating and designing the visual appearance and layout of websites. ",
       icon: <BrushIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
     {
       id: 1,
       title: "Web Developement",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+      desc: "The process of building, creating, and maintaining websites and web applications.",
       icon: <CodeIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
-    {
-      id: 2,
-      title: "Mobile Application",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
-      icon: <PhoneIphoneIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
-    },
+    // {
+    //   id: 2,
+    //   title: "Mobile Application",
+    //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+    //   icon: <PhoneIphoneIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
+    // },
   ];
 
   return (
@@ -68,9 +68,9 @@ const About = () => {
               <span style={{ color: "rgb(0,127,252)" }}> Marques Smalley</span>
             </h3>
             <p style={{ fontSize: "18px", fontWeight: 300 }}>
-              I am a frontend web developer. I can provide clean code and pixel
-              perfect design. I also make website more & more interactive with
-              web animations.
+              I am a full stack developer with a focus on frontend development,
+              which I am responsible for creating and implementing the user
+              interface and user experience of web applications
             </p>
             <p>
               <b>Full Name</b>: Marques James Smalley

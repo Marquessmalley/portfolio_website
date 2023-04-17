@@ -26,7 +26,7 @@ const ReviewsSlideShow = () => {
     },
   ];
   return (
-    <Slider autoplay={1} infinite={true}>
+    <Slider>
       {slides.map((slide, id, index) => (
         <Grid
           key={id}
