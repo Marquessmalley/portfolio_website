@@ -101,12 +101,12 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="/portfolio_website/" element={<Home />} />
-          <Route path="/portfolio_website/about" element={<About />} />
-          <Route path="/portfolio_website/resume" element={<Resume />} />
-          <Route path="/portfolio_website/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio_website/blogs" element={<Blogs />} />
-          <Route path="/portfolio_website/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Box>
     </Box>
