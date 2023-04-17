@@ -15,32 +15,32 @@ const Portfolio = () => {
   const cards = [
     {
       id: 1,
-      title: "Card 1",
-      description: "Description for Card 1",
+      title: "Coming soon..",
+      description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
     },
     {
       id: 2,
-      title: "Card 2",
-      description: "Description for Card 2",
+      title: "Coming soon..",
+      description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
     },
     {
       id: 3,
-      title: "Card 3",
-      description: "Description for Card 3",
+      title: "Coming soon..",
+      description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
     },
     {
       id: 4,
-      title: "Card 4",
-      description: "Description for Card 4",
+      title: "Coming soon..",
+      description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
     },
     {
       id: 5,
-      title: "Card 5",
-      description: "Description for Card 5",
+      title: "Coming soon..",
+      description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
     },
   ];

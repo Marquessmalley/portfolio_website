@@ -55,7 +55,12 @@ const SideDrawer = ({
               mt: 7,
             }}
           >
-            <Avatar sx={{ width: 125, height: 125 }}>Ms</Avatar>
+            <img
+              src="images/avatar-1.svg"
+              alt="avatar"
+              height={125}
+              width={125}
+            />
           </Box>
 
           <Divider sx={{ border: ".1px solid grey", width: "100%" }} />
@@ -474,7 +479,7 @@ const SideDrawer = ({
           </ul>
           <Divider sx={{ border: ".7px solid grey", width: "100%" }} />
           <Box>
-            <p style={{ color: "white" }}>© 2023 NuclearThemes</p>
+            <p style={{ color: "white" }}>© 2023 MarquesThemes</p>
           </Box>
         </Box>
       </Drawer>
