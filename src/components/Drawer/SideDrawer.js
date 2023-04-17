@@ -77,7 +77,7 @@ const SideDrawer = ({
               style={{
                 textDecoration: "none",
               }}
-              to="/"
+              to="/portfolio_website/"
               exact="true"
               onClick={() => {
                 setHomeActive(true);
@@ -89,6 +89,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   homeActive
                     ? {
@@ -145,7 +146,7 @@ const SideDrawer = ({
             {/* ABOUT LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/about"
+              to="/portfolio_website/about"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -157,6 +158,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   aboutActive
                     ? {
@@ -212,7 +214,7 @@ const SideDrawer = ({
             {/* RESUME LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/resume"
+              to="/portfolio_website/resume"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -224,6 +226,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   resumeActive
                     ? {
@@ -279,7 +282,7 @@ const SideDrawer = ({
             {/* PORTFOLIO LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/portfolio"
+              to="/portfolio_website/portfolio"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -291,6 +294,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   portfolioActive
                     ? {
@@ -346,7 +350,7 @@ const SideDrawer = ({
             {/* BLOGS LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/blogs"
+              to="/portfolio_website/blogs"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -358,6 +362,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   blogsActive
                     ? {
@@ -413,7 +418,7 @@ const SideDrawer = ({
             {/* CONTACT LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/contact"
+              to="/portfolio_website/contact"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -425,6 +430,7 @@ const SideDrawer = ({
               }}
             >
               <Box
+                onClick={handleDrawerToggle}
                 sx={
                   contactActive
                     ? {

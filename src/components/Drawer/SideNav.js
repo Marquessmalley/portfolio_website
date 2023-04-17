@@ -71,7 +71,7 @@ const SideNav = ({
               style={{
                 textDecoration: "none",
               }}
-              to="/"
+              to="/portfolio_website/"
               exact="true"
               onClick={() => {
                 setHomeActive(true);
@@ -139,7 +139,7 @@ const SideNav = ({
             {/* ABOUT LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/about"
+              to="/portfolio_website/about"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -206,7 +206,7 @@ const SideNav = ({
             {/* RESUME LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/resume"
+              to="/portfolio_website/resume"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -273,7 +273,7 @@ const SideNav = ({
             {/* PORTFOLIO LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/portfolio"
+              to="/portfolio_website/portfolio"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -340,7 +340,7 @@ const SideNav = ({
             {/* BLOGS LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/blogs"
+              to="/portfolio_website/blogs"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
@@ -407,7 +407,7 @@ const SideNav = ({
             {/* CONTACT LINK */}
             <Link
               style={{ textDecoration: "none" }}
-              to="/contact"
+              to="/portfolio_website/contact"
               exact="true"
               onClick={() => {
                 setHomeActive(false);
