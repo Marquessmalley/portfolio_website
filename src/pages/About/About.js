@@ -3,22 +3,28 @@ import { Grid } from "@mui/material";
 import Header from "../../components/layouts/Header";
 import ServiceCard from "../../components/Card/ServiceCard";
 import ReviewsSlideShow from "../../components/SlideShow/ReviewsSlideShow";
+import BrushIcon from "@mui/icons-material/Brush";
+import CodeIcon from "@mui/icons-material/Code";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 const About = () => {
   const serviceInfo = [
     {
       id: 0,
       title: "Web Design",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+      icon: <BrushIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
     {
       id: 1,
       title: "Web Developement",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+      icon: <CodeIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
     {
       id: 2,
       title: "Mobile Application",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
+      icon: <PhoneIphoneIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
   ];
 
@@ -36,11 +42,27 @@ const About = () => {
           }}
           mt={12}
         >
-          <Grid xs={12} sm={6} item md={6} lg={6}>
-            <h1>IMAGE</h1>
+          <Grid
+            xs={12}
+            sm={12}
+            item
+            md={6}
+            lg={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src="images/avatar-1.svg"
+              alt="avatar"
+              height={250}
+              width={250}
+            />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={6} lg={6}>
             <h3 style={{ fontWeight: 600, fontSize: "1.85rem" }}>
               I am
               <span style={{ color: "rgb(0,127,252)" }}> Marques Smalley</span>
@@ -78,7 +100,12 @@ const About = () => {
             }}
           >
             {serviceInfo.map((info) => (
-              <ServiceCard id={info.id} title={info.title} desc={info.desc} />
+              <ServiceCard
+                id={info.id}
+                title={info.title}
+                desc={info.desc}
+                icon={info.icon}
+              />
             ))}
           </Grid>
         </Grid>

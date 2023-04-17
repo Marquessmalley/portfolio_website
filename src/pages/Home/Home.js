@@ -1,4 +1,4 @@
-import { Grid, Box, IconButton } from "@mui/material";
+import { Grid, Box, IconButton, Link } from "@mui/material";
 import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 import "./styles.css";
 const Home = () => {
@@ -44,33 +44,36 @@ const Home = () => {
             end-users.
           </p>
           <Box sx={{ p: 1, display: "flex", alignItems: "center" }}>
-            <IconButton
-              variant="outlined"
-              sx={{ "&:hover": { border: "1px solid rgb(0,127,252)" } }}
-            >
-              <AiOutlineLinkedin
-                class="icon"
-                style={{
-                  fontSize: "2rem",
-                  color: "#a4acc4",
-                  "&:hover": {
-                    color: "red !important",
-                  },
-                }}
-              />
-            </IconButton>
-
-            <IconButton
-              sx={{ "&:hover": { border: "1px solid rgb(0,127,252)" } }}
-            >
-              <AiOutlineGithub
-                style={{
-                  fontSize: "2rem",
-                  color: "#a4acc4",
-                  "&:hover": { color: "blue" },
-                }}
-              />
-            </IconButton>
+            <Link href="https://www.linkedin.com/in/m-smalley2120/">
+              <IconButton
+                variant="outlined"
+                sx={{ "&:hover": { border: "1px solid rgb(0,127,252)" } }}
+              >
+                <AiOutlineLinkedin
+                  class="icon"
+                  style={{
+                    fontSize: "2rem",
+                    color: "#a4acc4",
+                    "&:hover": {
+                      color: "red !important",
+                    },
+                  }}
+                />
+              </IconButton>
+            </Link>
+            <Link href="https://github.com/Marquessmalley">
+              <IconButton
+                sx={{ "&:hover": { border: "1px solid rgb(0,127,252)" } }}
+              >
+                <AiOutlineGithub
+                  style={{
+                    fontSize: "2rem",
+                    color: "#a4acc4",
+                    "&:hover": { color: "blue" },
+                  }}
+                />
+              </IconButton>
+            </Link>
           </Box>
         </Grid>
       </Grid>

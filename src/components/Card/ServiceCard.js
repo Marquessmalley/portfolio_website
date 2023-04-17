@@ -6,9 +6,7 @@ const ServiceCard = ({ id, icon, title, desc }) => {
       sx={{ maxWidth: 350, background: "rgb(25,29,43)", margin: "1rem" }}
     >
       <CardContent>
-        <Box>
-          <p>ICON</p>
-        </Box>
+        <Box>{icon}</Box>
         <p style={{ color: "#fff", fontWeight: 600, fontSize: "20px" }}>
           {title}
         </p>
