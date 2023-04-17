@@ -50,14 +50,15 @@ const Contact = () => {
         }
       );
 
+    setFormError(false);
+    setFormConfirmed(true);
+
     setFormData({
       name: "",
       email: "",
       subject: "",
       message: "",
     });
-    setFormError(false);
-    setFormConfirmed(true);
   };
 
   return (
@@ -75,6 +76,7 @@ const Contact = () => {
               label="Name"
               name="name"
               variant="outlined"
+              value={formData.name}
               error={formError}
               onChange={handleFormData}
               sx={{
@@ -99,6 +101,7 @@ const Contact = () => {
               label="Email"
               name="email"
               variant="outlined"
+              value={formData.email}
               error={formError}
               type="email"
               onChange={handleFormData}
@@ -124,6 +127,7 @@ const Contact = () => {
               label="Subject"
               name="subject"
               variant="outlined"
+              value={formData.subject}
               error={formError}
               onChange={handleFormData}
               sx={{
@@ -148,6 +152,7 @@ const Contact = () => {
               label="Message"
               name="message"
               variant="outlined"
+              value={formData.message}
               error={formError}
               multiline
               rows={4}
