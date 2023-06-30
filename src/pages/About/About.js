@@ -84,6 +84,9 @@ const About = () => {
             <p>
               <b>Location</b>: Grand Rapids,MI
             </p>
+            <p>
+              <b>Software experience</b>: 3 years
+            </p>
           </Grid>
         </Grid>
 
