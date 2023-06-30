@@ -68,15 +68,15 @@ const About = () => {
               <span style={{ color: "rgb(0,127,252)" }}> Marques Smalley</span>
             </h3>
             <p style={{ fontSize: "18px", fontWeight: 300 }}>
-              I am a full stack developer with a focus on frontend development,
-              which I am responsible for creating and implementing the user
-              interface and user experience of web applications
+              I am a full stack developer (MERN Stack) with a focus on frontend
+              development, which I am responsible for creating and implementing
+              the user interface and user experience of web applications
             </p>
             <p>
               <b>Full Name</b>: Marques James Smalley
             </p>
             <p>
-              <b>Age</b>: 24 Years
+              <b>Age</b>: 25 Years
             </p>
             <p>
               <b>Language</b>: English

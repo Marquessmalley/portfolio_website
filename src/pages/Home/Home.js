@@ -25,8 +25,11 @@ const Home = () => {
           }}
         >
           <h1 style={{ textAlign: "center", color: "white" }}>
-            Waddup Doe,
-            <span style={{ color: "rgb(0,127,252)" }}>I'm Marques Smalley</span>
+            Hello,
+            <span style={{ color: "rgb(0,127,252)" }}>
+              {" "}
+              I'm Marques Smalley
+            </span>
           </h1>
           <p
             style={{

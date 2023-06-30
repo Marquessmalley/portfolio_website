@@ -15,20 +15,23 @@ const Portfolio = () => {
   const cards = [
     {
       id: 1,
-      title: "Coming soon..",
-      description: "Inprogress",
-      imageUrl: "https://via.placeholder.com/150",
+      title: "Logrhythm Axon",
+      description:
+        "LogRhythm Axon is a cloud-native SaaS platform developer to help security teams more effectively mitigate cyber threats within their organization.",
+      imageUrl: "images/logrhythm.png",
     },
     {
       id: 2,
-      title: "Coming soon..",
-      description: "Inprogress",
-      imageUrl: "https://via.placeholder.com/150",
+      title: "Know Honesty",
+      description:
+        "Fullstack Certified EOS implementation software that helps oragnizations collect data on employee morale.",
+      imageUrl: "images/knowhonesty.png",
     },
     {
       id: 3,
-      title: "Coming soon..",
-      description: "Inprogress",
+      title: "Mistore(Coming soon)",
+      description:
+        "An ecommerce website built with the MERN (MongoDB, Express, React, Node.js) stack, allowing users to browse products, add items to cart, and complete transactions securely.",
       imageUrl: "https://via.placeholder.com/150",
     },
     {
