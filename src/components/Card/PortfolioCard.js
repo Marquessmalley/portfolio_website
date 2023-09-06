@@ -8,12 +8,21 @@ import {
   Typography,
 } from "@mui/material";
 
-const PortfolioCard = ({ title, description, imageUrl }) => {
+const PortfolioCard = ({ title, description, imageUrl, link }) => {
   return (
     <Grid xs={7} sm={6} md={4} lg={3} item>
       <Card>
         <CardHeader title={title} />
-        <CardMedia component="img" image={imageUrl} />
+        {link !== null ? (
+          <a href={link}>
+            <CardMedia component="img" image={imageUrl} />
+          </a>
+        ) : (
+          <>
+            <CardMedia component="img" image={imageUrl} />
+          </>
+        )}
+
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {description}

@@ -26,22 +26,22 @@ const Resume = () => {
     },
     {
       id: 2,
+      skill: "Material-UI",
+      grade: 80,
+    },
+    {
+      id: 3,
       skill: "Git",
       grade: 85,
     },
     {
-      id: 3,
+      id: 4,
       skill: "Github",
       grade: 85,
     },
     {
-      id: 4,
-      skill: "API",
-      grade: 85,
-    },
-    {
       id: 5,
-      skill: "AWS Ampify",
+      skill: "AWS(Amplify, S3, EC2, Lambda etc..)",
       grade: 75,
     },
   ];
@@ -58,10 +58,13 @@ const Resume = () => {
     {
       id: 1,
       year: "Jan 2022-2023",
-      position: "React UI Developer",
+      position: "Full Stack Software Developer",
       company: "Creative Mines",
-      description:
-        "As a developer, help team build modern, custom and secure web/mobile applications that engage users and reach businesses goals.",
+      description: [
+        "Collaborated with cross-functional teams in fast-paced Agile environment to develop and deliver multiple projects.",
+        "Translated business requirements into technical solutions, working closely with clients to ensure their needs were met effectively.",
+        "Participated in daily stand-up meetings, engaged in pair programming sessions, collaborated with fellow developers to improve quality code.",
+      ],
     },
   ];
 
@@ -81,6 +84,7 @@ const Resume = () => {
       degree: "Bachelors of Business Administration ",
     },
   ];
+
   return (
     <Grid container>
       <Header title={"MY SKILLS"} progressValue={50} />
@@ -207,7 +211,16 @@ const Resume = () => {
             <p
               style={{ color: "#a4acc4", fontSize: "18px", lineHeight: "30px" }}
             >
-              {work.description}
+              {typeof work.description === "string" && work.description}
+              {typeof work.description === "object" &&
+                work.description.map((history) => {
+                  return (
+                    <>
+                      - {history}
+                      <br />
+                    </>
+                  );
+                })}
             </p>
           </Grid>
         </Grid>

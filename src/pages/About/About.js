@@ -17,15 +17,15 @@ const About = () => {
     {
       id: 1,
       title: "Web Developement",
-      desc: "The process of building, creating, and maintaining websites and web applications.",
+      desc: "Creating and maintaining websites or web applications using various technologies such as HTML, CSS, JavaScript, and relevant frameworks like React, Angular, or Vue.js.",
       icon: <CodeIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
     },
-    // {
-    //   id: 2,
-    //   title: "Mobile Application",
-    //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.",
-    //   icon: <PhoneIphoneIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
-    // },
+    {
+      id: 2,
+      title: "API Development",
+      desc: " Creating application programming interfaces (APIs) to enable communication between different software components or systems.",
+      // icon: <PhoneIphoneIcon sx={{ color: "#fff", fontSize: "2.5rem" }} />,
+    },
   ];
 
   return (
@@ -68,7 +68,7 @@ const About = () => {
               <span style={{ color: "rgb(0,127,252)" }}> Marques Smalley</span>
             </h3>
             <p style={{ fontSize: "18px", fontWeight: 300 }}>
-              I am a full stack developer (MERN Stack) with a focus on frontend
+              I am a full stack software developer with a focus on frontend
               development, which I am responsible for creating and implementing
               the user interface and user experience of web applications
             </p>
@@ -85,7 +85,7 @@ const About = () => {
               <b>Location</b>: Grand Rapids,MI
             </p>
             <p>
-              <b>Software experience</b>: 3 years
+              <b>Software experience</b>: 4 years
             </p>
           </Grid>
         </Grid>

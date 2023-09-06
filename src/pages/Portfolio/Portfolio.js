@@ -19,6 +19,7 @@ const Portfolio = () => {
       description:
         "LogRhythm Axon is a cloud-native SaaS platform developer to help security teams more effectively mitigate cyber threats within their organization.",
       imageUrl: "images/logrhythm.png",
+      link: null,
     },
     {
       id: 2,
@@ -26,25 +27,30 @@ const Portfolio = () => {
       description:
         "Fullstack Certified EOS implementation software that helps oragnizations collect data on employee morale.",
       imageUrl: "images/knowhonesty.png",
+      link: null,
     },
     {
       id: 3,
+      title: "Admin Dashboard",
+      description:
+        "User-friendly CMS (Content Management System) for handling users and products, which can be customized for an e-commerce platform, with a responsive interface for easy navigation and task completion.",
+      imageUrl: "images/admin.png",
+      link: "https://mistrain.onrender.com/",
+    },
+    {
+      id: 4,
       title: "Mistore(Coming soon)",
       description:
         "An ecommerce website built with the MERN (MongoDB, Express, React, Node.js) stack, allowing users to browse products, add items to cart, and complete transactions securely.",
       imageUrl: "https://via.placeholder.com/150",
-    },
-    {
-      id: 4,
-      title: "Coming soon..",
-      description: "Inprogress",
-      imageUrl: "https://via.placeholder.com/150",
+      link: null,
     },
     {
       id: 5,
       title: "Coming soon..",
       description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
+      link: null,
     },
   ];
 
@@ -68,6 +74,7 @@ const Portfolio = () => {
             title={card.title}
             description={card.description}
             imageUrl={card.imageUrl}
+            link={card.link}
           />
         ))}
       </Grid>
