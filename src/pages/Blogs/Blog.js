@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Grid, Avatar, Box, Typography } from "@mui/material";
+import { Grid, Avatar, Box, Typography, IconButton } from "@mui/material";
 import Header from "../../components/layouts/Header";
-
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useNavigate } from "react-router-dom";
 const Blog = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [post, setPost] = useState();
 
   useEffect(() => {
@@ -34,10 +36,19 @@ const Blog = () => {
 
   const formattedDate = formatDate(post?.date);
 
+  const handleBackClick = () => {
+    navigate("/portfolio_website/blogs");
+  };
+
   return (
     <Grid container>
       <Header title={"BLOG"} progressValue={50} />
-      <Grid item xs={12} sx={{ textAlign: "center" }}>
+      <Grid item m={3}>
+        <IconButton aria-label="Back" onClick={handleBackClick}>
+          <ArrowBackIosIcon sx={{ color: "#fff" }} />
+        </IconButton>
+      </Grid>
+      <Grid item xs={12} sx={{ textAlign: "center" }} m={3}>
         {/* Display the image */}
         {post && (
           <img
