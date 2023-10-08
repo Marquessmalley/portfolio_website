@@ -9,6 +9,7 @@ import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Blogs from "./pages/Blogs/Blogs";
+import Blog from "./pages/Blogs/Blog";
 import Contact from "./pages/Contact/Contact";
 
 function App() {
@@ -106,6 +107,7 @@ function App() {
           <Route path="/portfolio_website/resume" element={<Resume />} />
           <Route path="/portfolio_website/portfolio" element={<Portfolio />} />
           <Route path="/portfolio_website/blogs" element={<Blogs />} />
+          <Route path="/portfolio_website/blogs/:id" element={<Blog />} />
           <Route path="/portfolio_website/contact" element={<Contact />} />
         </Routes>
       </Box>

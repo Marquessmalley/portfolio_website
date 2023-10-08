@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Grid, Pagination } from "@mui/material";
+
 import Header from "../../components/layouts/Header";
 import BlogCard from "../../components/Card/BlogCard";
 
@@ -37,26 +38,26 @@ const Blogs = () => {
 
       {visibleCards &&
         visibleCards.map((card) => (
-          <>
-            <Grid
-              item
-              m={3}
-              xs={10}
-              sm={8}
-              md={5}
-              lg={5}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <BlogCard
-                key={card.id}
-                title={card.title}
-                author={card.author}
-                image={card.featured_image}
-                content={card.content}
-                date={card.date}
-              />
-            </Grid>
-          </>
+          <Grid
+            key={card.ID}
+            item
+            m={3}
+            xs={10}
+            sm={8}
+            md={5}
+            lg={5}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <BlogCard
+              id={card.ID}
+              title={card.title}
+              author={card.author}
+              image={card.featured_image}
+              content={card.content}
+              date={card.date}
+              excerpt={card.excerpt}
+            />
+          </Grid>
         ))}
       <Grid item lg={12}>
         <Pagination

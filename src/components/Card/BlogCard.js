@@ -6,8 +6,9 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const BlogCard = ({ title, author, date, content, image }) => {
+const BlogCard = ({ id, title, author, date, content, image, excerpt }) => {
   const formatDate = (isoDate) => {
     const options = {
       weekday: "long",
@@ -24,15 +25,20 @@ const BlogCard = ({ title, author, date, content, image }) => {
   const formattedDate = formatDate(date);
 
   return (
-    <Card>
-      <CardHeader
-        title={title}
-        subheader={`By ${author.first_name} ${author.last_name} on ${formattedDate}`}
-      />
-      <CardMedia component="img" alt={title} height="200" image={image} />
+    <Card sx={{ borderRadius: "12px", cursor: "pointer" }}>
+      <CardMedia component="img" alt={title} height="150" image={image} />
+      <Link
+        to={`/portfolio_website/blogs/${id}`}
+        style={{ textDecoration: "none", color: "black" }}
+      >
+        <CardHeader
+          title={title}
+          subheader={`By ${author.first_name} ${author.last_name} on ${formattedDate}`}
+        />
+      </Link>
       <CardContent>
         <Typography variant="body2" color="textSecondary">
-          {content}
+          <div dangerouslySetInnerHTML={{ __html: excerpt }} />
         </Typography>
       </CardContent>
     </Card>
