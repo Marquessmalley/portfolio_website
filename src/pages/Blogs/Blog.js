@@ -32,7 +32,7 @@ const Blog = () => {
     return date.toLocaleString("en-US", options);
   };
 
-  const formattedDate = formatDate(post.date);
+  const formattedDate = formatDate(post?.date);
 
   return (
     <Grid container>
