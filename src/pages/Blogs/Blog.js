@@ -63,10 +63,14 @@ const Blog = () => {
           />
         )}
         <Box sx={{ marginLeft: "1rem" }}>
-          <Typography
-            sx={{ color: "#fff" }}
-          >{`${post.author.first_name} ${post.author.last_name}`}</Typography>
-          <Typography sx={{ color: "#fff" }}>{formattedDate}</Typography>
+          {post && (
+            <>
+              <Typography
+                sx={{ color: "#fff" }}
+              >{`${post.author.first_name} ${post.author.last_name}`}</Typography>
+              <Typography sx={{ color: "#fff" }}>{formattedDate}</Typography>
+            </>
+          )}
         </Box>
       </Grid>
 
