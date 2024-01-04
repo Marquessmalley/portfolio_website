@@ -31,22 +31,15 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "Admin Dashboard",
-      description:
-        "User-friendly CMS (Content Management System) for handling users and products, which can be customized for an e-commerce platform, with a responsive interface for easy navigation and task completion.",
-      imageUrl: "images/admin.png",
-      link: "https://mistrain.onrender.com/",
-    },
-    {
-      id: 4,
-      title: "Mistore(Coming soon)",
+      title: "Mistore(Inprogress)",
       description:
         "An ecommerce website built with the MERN (MongoDB, Express, React, Node.js) stack, allowing users to browse products, add items to cart, and complete transactions securely.",
-      imageUrl: "https://via.placeholder.com/150",
-      link: null,
+      imageUrl: "images/store.png",
+      link: "https://mistrains.shop/",
     },
+
     {
-      id: 5,
+      id: 4,
       title: "Coming soon..",
       description: "Inprogress",
       imageUrl: "https://via.placeholder.com/150",
