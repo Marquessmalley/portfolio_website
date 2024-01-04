@@ -57,6 +57,14 @@ const Resume = () => {
     },
     {
       id: 1,
+      year: "Jan 2023 - Present",
+      position: "Freelance",
+      company: "Self",
+      description:
+        "Design and develop websites and web applications for clients, using various programming languages and frameworks.",
+    },
+    {
+      id: 1,
       year: "Jan 2022-2023",
       position: "Full Stack Software Developer",
       company: "Creative Mines",
