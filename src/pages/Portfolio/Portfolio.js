@@ -19,7 +19,7 @@ const Portfolio = () => {
       description:
         "LogRhythm Axon is a cloud-native SaaS platform developer to help security teams more effectively mitigate cyber threats within their organization.",
       imageUrl: "images/logrhythm.png",
-      link: null,
+      link: "https://logrhythm.com/products/logrhythm-axon/",
     },
     {
       id: 2,
@@ -27,15 +27,15 @@ const Portfolio = () => {
       description:
         "Fullstack Certified EOS implementation software that helps oragnizations collect data on employee morale.",
       imageUrl: "images/knowhonesty.png",
-      link: null,
+      link: "https://www.assessment.knowhonesty.com/signup",
     },
     {
       id: 3,
-      title: "Mistore(Inprogress)",
+      title: "Mistore",
       description:
         "An ecommerce website built with the MERN (MongoDB, Express, React, Node.js) stack, allowing users to browse products, add items to cart, and complete transactions securely.",
       imageUrl: "images/store.png",
-      link: "https://mistrains.shop/",
+      link: "https://github.com/Marquessmalley/mistore",
     },
 
     {
